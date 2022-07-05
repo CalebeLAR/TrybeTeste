@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title>Exercício 5.2</title>
+    <style>
+      section {
+        border-color: black;
+        border-style: solid;
+      }
+
+      .title {
+        text-align: center;
+      }
+
+      .main-content {
+        background-color: yellow;
+      }
+
+      .main-content .center-content {
+        background-color: red;
+        width: 50%;
+        margin-left: auto;
+        margin-right: auto;
+      }
+
+      .main-content .center-content p {
+        font-style: italic;
+      }
+
+      .main-content .left-content {
+        background-color: green;
+        width: 60%;
+        margin-left: 0;
+        margin-right: auto;
+      }
+
+      .main-content .left-content .small-image {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        border-radius: 100%;
+      }
+
+      .main-content .right-content {
+        background-color: blue;
+        width: 60%;
+        margin-left: auto;
+        margin-right: 0;
+      }
+
+      .main-content .description {
+        text-align: center;
+      }
+    </style>
+  </head>
+  <body>
+    <script>
+        //Q1
+        let titulo = document.createElement("h1");
+        titulo.innerText = "Exercício 5.2 - JavaScript DOM";
+        document.body.appendChild(titulo);
+        //Q2
+        let tagMain = document.createElement("main");
+        tagMain.classList.add("main-content");
+        document.body.appendChild(tagMain);
+        //Q3
+        let tagSection = document.createElement("section");
+        tagSection.classList.add("center-content");
+        tagMain.appendChild(tagSection)
+        //Q4
+        let tagP = document.createElement("section");
+        tagP.innerText = "Vamo que vamo!"
+        tagMain.appendChild(tagP)
+        //Q5 
+        let tagSection2 = document.createElement("section");
+        tagSection2.classList.add("left-content");
+        tagMain.appendChild(tagSection2);
+        //Q6
+        let tagSection3 = document.createElement("section");
+        tagSection3.classList.add("right-content");
+        tagMain.appendChild(tagSection3);
+        //Q7
+        let imagem = document.createElement("img");
+        imagem.src = "https://picsum.photos/200";
+        imagem.classList.add("small-image");
+        tagSection2.appendChild(imagem)
+        //Q8
+        
+
+    </script>
+  </body>
+</html>
+
