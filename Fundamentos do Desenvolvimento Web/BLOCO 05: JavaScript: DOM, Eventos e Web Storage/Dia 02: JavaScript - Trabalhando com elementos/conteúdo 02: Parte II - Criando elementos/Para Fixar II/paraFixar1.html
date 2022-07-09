@@ -19,7 +19,6 @@
   <main id="paiDoPai">
     <section id="pai">
       <section id="primeiroFilho"></section>
-
       <section id="elementoOndeVoceEsta">
         <section id="primeiroFilhoDoFilho">primeiroFilhoDoFilho</section>
         <section id="segundoEUltimoFilhoDoFilho">segundoEUltimoFilhoDoFilho</section>
@@ -31,25 +30,25 @@
   </main>
 
   <script >
-      let questão1_html = document.getElementById("elementoOndeVoceEsta");
-      let questão1_inxerto = document.createElement("section");
-      questão1_inxerto.innerText = "Irmão de ---elementoOndeVoceEstava---";
-      questão1_html.append(questão1_inxerto);
-
-      let questão2_html = document.getElementById("elementoOndeVoceEsta");
-      let questão2_inxerto = document.createElement("section");
-      questão2_inxerto.innerText = "Filho de ---elementoOndeVoceEstava---";
-      questão2_html.appendChild(questão2_inxerto);
-
-      let questão3_html = document.getElementById("primeiroFilhoDoFilho");
-      let questão3_inxerto = document.createElement("section");
-      questão3_inxerto.innerText = "Filho de ---primeiroFilhoDoFilho---";
-      questão3_html.appendChild(questão3_inxerto);
-
-      let questão4_html = questão3_inxerto;
-      console.log(questão4_html.parentElement.parentElement.nextElementSibling);
-
-
+      //Q1
+      let pai = document.getElementById("elementoOndeVoceEsta").parentElement;
+      let irmao = document.createElement("section");
+      irmao.id = "irmão do elementoOndeVocêEsta";
+      pai.appendChild(irmao);
+      //Q2
+      let elementoOndeVoceEsta = document.getElementById("elementoOndeVoceEsta");
+      let filho_elementoOndeVoceEsta = document.createElement("section");
+      filho_elementoOndeVoceEsta.id = "filho_elementoOndeVoceEsta";
+      elementoOndeVoceEsta.appendChild(filho_elementoOndeVoceEsta);
+      //Q3
+      let primeiroFilhoDoFilho = document.getElementById("primeiroFilhoDoFilho");
+      let filho_primeiroFilhoDoFilho = document.createElement("section");
+      filho_primeiroFilhoDoFilho.id = "filho_primeiroFilhoDoFilho";
+      primeiroFilhoDoFilho.appendChild(filho_primeiroFilhoDoFilho)
+      //Q4
+      const terceiroFilho = filho_primeiroFilhoDoFilho.parentElement.parentElement.nextElementSibling
+      console.log(terceiroFilho);
+  
   </script>
 
 </body>
